@@ -6,6 +6,7 @@ use defmt::info;
 #[cfg(feature = "drs-scheduler")]
 use embassy_executor::raw::Deadline;
 use embassy_executor::Spawner;
+use embassy_futures::join::join;
 use embassy_nrf::{
     bind_interrupts,
     config::{Config as NrfConfig, HfclkSource},
@@ -23,7 +24,7 @@ use postcard_rpc::{
 };
 use static_cell::StaticCell;
 use template_icd::StageCommand;
-use trace::drain;
+use trace::{drain, task_identify};
 
 bind_interrupts!(pub struct Irqs {
     USBD => usb::InterruptHandler<USBD>;
@@ -111,6 +112,7 @@ async fn main(spawner: Spawner) {
 
     let (device, tx_impl, rx_impl) =
         app::STORAGE.init_poststation(driver, config, pbufs.tx_buf.as_mut_slice());
+    tx_impl.set_timeout_ms_per_frame(50).await;
     let dispatcher = app::MyApp::new(context, spawner.into());
     let vkk = dispatcher.min_key_len();
     let mut server: app::AppServer = Server::new(
@@ -134,13 +136,26 @@ async fn main(spawner: Spawner) {
     // Begin running!
     #[cfg(feature = "drs-scheduler")]
     Deadline::set_current_task_deadline(1).await;
-    loop {
-        // If the host disconnects, we'll return an error here.
-        // If this happens, just wait until the host reconnects
-        let _x = server.run().await;
-        defmt::info!("I/O error");
-        Timer::after_millis(100).await;
-    }
+
+    let work_fut = async move {
+        loop {
+            // If the host disconnects, we'll return an error here.
+            // If this happens, just wait until the host reconnects
+            let _x = server.run().await;
+            defmt::info!("I/O error");
+            Timer::after_millis(100).await;
+        }
+    };
+    let ident_fut = async move {
+        let mut ticker = Ticker::every(Duration::from_secs(3));
+        loop {
+            ticker.next().await;
+            task_identify("MAIN_TASK").await;
+        }
+    };
+
+    join(work_fut, ident_fut).await;
+
 }
 
 /// This handles the low level USB management
@@ -149,7 +164,17 @@ pub async fn usb_task(mut usb: UsbDevice<'static, app::AppDriver>) {
     // lol make this the highest prio
     #[cfg(feature = "drs-scheduler")]
     Deadline::set_current_task_deadline(0).await;
-    usb.run().await;
+
+    let run_fut = usb.run();
+    let ident_fut = async move {
+        let mut ticker = Ticker::every(Duration::from_secs(3));
+        loop {
+            ticker.next().await;
+            task_identify("USB_TASK").await;
+        }
+    };
+
+    join(run_fut, ident_fut).await;
 }
 
 /// This task is a "sign of life" logger
@@ -159,6 +184,7 @@ pub async fn logging_task(sender: Sender<AppTx>) {
     let start = Instant::now();
     loop {
         ticker.next().await;
+        task_identify("LOG_TASK").await;
         let _ = sender_fmt!(sender, "Uptime: {:?}", start.elapsed()).await;
     }
 }

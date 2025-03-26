@@ -5,11 +5,9 @@ use core::{future::poll_fn, pin::pin, sync::atomic::{AtomicUsize, Ordering}, tas
 use critical_section::CriticalSection;
 use embassy_executor::raw::task_from_waker;
 use bbq2::nicknames::Churrasco;
-use embassy_futures::yield_now;
 use embassy_time::{Duration, Instant, WithTimeout};
 use grounded::uninit::GroundedCell;
 use maitake_sync::WaitQueue;
-use portable_atomic::AtomicU32;
 use postcard_rpc::{header::VarSeq, server::Sender};
 use template_icd::{Event, Report, TraceReportTopic};
 use postcard::to_slice_cobs;
@@ -21,7 +19,6 @@ use crate::app::AppTx;
 const SIZE: usize = 64 * 1024;
 const NOTIF_SIZE: usize = SIZE / 8;
 static QUEUE: Churrasco<SIZE> = Churrasco::new();
-static DRAIN_ID: AtomicU32 = AtomicU32::new(0);
 static PENDING_Q: WaitQueue = WaitQueue::new();
 static LAST: GroundedCell<u64> = GroundedCell::const_init();
 
@@ -129,12 +126,12 @@ pub extern "Rust" fn _embassy_trace_poll_start(_executor_id: u32) {
     });
 }
 
-pub async fn task_identify(assigned_id: u32) {
+pub async fn task_identify(name: &str) {
     let task_id: u32 = poll_fn(|cx| {
         Poll::Ready(task_from_waker(cx.waker()).as_id())
     }).await;
     critical_section::with(|cs| {
-        let evt = Event::TaskIdentify { tick: now(), task_id: task_id - 0x20000000, assigned_id };
+        let evt = Event::TaskIdentify { tick: now_delta(cs), task_id: task_id - 0x20000000, name };
         trace(&evt, cs);
     });
 }
@@ -145,10 +142,6 @@ pub async fn task_identify(assigned_id: u32) {
 pub async fn drain(sender: Sender<AppTx>) {
     #[cfg(feature = "drs-scheduler")]
     Deadline::set_current_task_deadline(2).await;
-
-    let task_id: u32 = poll_fn(|cx| {
-        Poll::Ready(task_from_waker(cx.waker()).as_id())
-    }).await;
 
     // We need to ignore the current task, because USB sends data in chunks
     // of 64 bytes, and if we need to yield, notify, and run for each packet,
@@ -206,14 +199,13 @@ pub async fn drain(sender: Sender<AppTx>) {
 
             if last.elapsed() >= Duration::from_secs(1) {
                 last = Instant::now();
+                task_identify("DRAIN_TASK").await;
                 defmt::info!("-->DG: {=usize} -> {=usize}", ttl, drains);
                 ttl = 0;
                 drains = 0;
             }
 
-            if len == 768 {
-                yield_now().await;
-            } else {
+            if len != 768 {
                 break 'inner;
             }
         }

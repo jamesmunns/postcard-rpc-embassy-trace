@@ -16,7 +16,13 @@ pub static HALT: WaitQueue = WaitQueue::new();
 
 #[embassy_executor::task(pool_size = 50)]
 pub async fn worker(cmd: StageCommand) {
-    task_identify(cmd.ident).await;
+    {
+        use core::fmt::Write;
+        let mut name = heapless::String::<10>::new();
+        let _ = name.push_str("WRK-");
+        let _ = write!(&mut name, "{:06X}", cmd.ident);
+        task_identify(name.as_str()).await;
+    }
     let halt_fut = HALT.wait();
     let mut halt_fut = pin!(halt_fut);
     let _ = halt_fut.as_mut().subscribe();
@@ -38,11 +44,11 @@ pub async fn worker(cmd: StageCommand) {
             }
             for step in cmd.steps.iter() {
                 match step {
-                    Step::SleepMs { ms } => Timer::after_millis((*ms).into()).await,
-                    Step::WorkMs { ms } => {
+                    Step::SleepUs { us } => Timer::after_micros((*us).into()).await,
+                    Step::WorkUs { us } => {
                         let now = Instant::now();
-                        let ttl = u64::from(*ms);
-                        while now.elapsed().as_millis() < ttl {
+                        let ttl = u64::from(*us);
+                        while now.elapsed().as_micros() < ttl {
                             // busy!
                         }
                     },

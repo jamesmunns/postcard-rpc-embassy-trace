@@ -35,7 +35,7 @@ pub struct Report {
 // These aren't actually sent directly as we need to
 // batch them
 #[derive(Debug, Serialize, Deserialize, Schema)]
-pub enum Event {
+pub enum Event<'a> {
     // _embassy_trace_task_new
     TaskNew {
         tick: u64,
@@ -68,17 +68,17 @@ pub enum Event {
     TaskIdentify {
         tick: u64,
         task_id: u32,
-        assigned_id: u32,
+        name: &'a str,
     }
 }
 
 #[derive(Debug, Serialize, Deserialize, Schema)]
 pub enum Step {
-    SleepMs {
-        ms: u32,
+    SleepUs {
+        us: u32,
     },
-    WorkMs {
-        ms: u32,
+    WorkUs {
+        us: u32,
     },
     Yield,
 }
@@ -151,5 +151,5 @@ topics! {
     | -------                   | ---------     | ----                  | ---                           |
     | TraceReportTopic          | Report<'a>    | "trace/report"        | cfg(not(feature = "use-std")) |
     | TraceReportTopic          | Report        | "trace/report"        | cfg(feature = "use-std")      |
-    | FakeEventTopic            | Event         | "trace/fake/event"    |                               |
+    | FakeEventTopic            | Event<'a>     | "trace/fake/event"    |                               |
 }

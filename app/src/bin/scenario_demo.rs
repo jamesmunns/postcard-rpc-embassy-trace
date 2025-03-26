@@ -27,7 +27,6 @@ const SERIAL: u64 = 0x4274E020EBB2D27E;
 
 async fn inner_main() -> Result<(), String> {
     let client = connect_insecure(51837).await.unwrap();
-    tokio::task::spawn(dump(client.clone()));
     sleep(Duration::from_secs(1)).await;
 
     println!("Halting...");
@@ -41,8 +40,12 @@ async fn inner_main() -> Result<(), String> {
 
     for i in 100..140 {
         let mut steps = heapless::Vec::new();
-        let _ = steps.push(Step::SleepMs { ms: 4 * i });
-        let _ = steps.push(Step::WorkMs { ms: (i - 99) / 4 });
+        let _ = steps.push(Step::SleepUs { us: 2 * i * 1000 });
+        let _ = steps.push(Step::WorkUs { us: 1000 * (i - 99) / 8 });
+        let _ = steps.push(Step::Yield);
+        let _ = steps.push(Step::WorkUs { us: 1000 * (i - 99) / 8 });
+        let _ = steps.push(Step::SleepUs { us: 2 * i * 1000 });
+        let _ = steps.push(Step::WorkUs { us: 1000 * (i - 99) / 8 });
 
         client.proxy_endpoint::<StageTaskEndpoint>(
             SERIAL,
@@ -64,53 +67,9 @@ async fn inner_main() -> Result<(), String> {
         &()
     ).await.unwrap().unwrap();
 
+    println!("Running...");
     loop {
         sleep(Duration::from_millis(1000)).await;
     }
 }
 
-async fn dump(client: PoststationClient) {
-    let mut sub = client.stream_topic::<TraceReportTopic>(SERIAL).await.unwrap();
-    // let mut tasks = HashMap::<u32, TaskData>::new();
-    let mut last = Instant::now();
-    // let start = Instant::now();
-    let mut bytes = 0;
-
-    // let mut exec_last_idle: Option<u64> = None;
-    // let mut exec_last_active: Option<u64> = None;
-    // let mut exec_ticks_idle = 0u64;
-    // let mut exec_ticks_active = 0u64;
-    // let mut extra = vec![];
-    let mut ct = 0;
-
-    loop {
-        let mut msg = sub.recv().await.unwrap();
-        bytes += msg.events_cobs.len();
-
-        // TODO: this doesn't handle wraparounds
-        for ch in msg.events_cobs.split_inclusive_mut(|v| *v == 0) {
-        //     if ch.is_empty() {
-        //         continue;
-        //     }
-        //     let ch = if extra.is_empty() {
-        //         ch
-        //     } else {
-        //         extra.extend_from_slice(ch);
-        //         extra.as_mut_slice()
-        //     };
-
-            let Ok(_evt) = postcard::from_bytes_cobs::<Event>(ch) else {
-        //         extra = ch.to_vec();
-                continue;
-            };
-            ct += 1;
-            if last.elapsed() > Duration::from_secs(1) {
-                last = Instant::now();
-                println!("{ct}");
-                ct = 0;
-            }
-        //     extra.clear();
-        //     // println!("{evt:?}");
-        }
-    }
-}
