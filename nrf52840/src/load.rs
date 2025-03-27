@@ -13,6 +13,7 @@ use embassy_executor::raw::Deadline;
 
 pub static STAGE: WaitQueue = WaitQueue::new();
 pub static HALT: WaitQueue = WaitQueue::new();
+pub static TRIGGER: WaitQueue = WaitQueue::new();
 
 #[embassy_executor::task(pool_size = 50)]
 pub async fn worker(cmd: StageCommand) {
@@ -49,7 +50,9 @@ pub async fn worker(cmd: StageCommand) {
         Deadline::set_current_task_deadline_after(cmd.deadline_ticks).await;
 
         loop {
-            deadline_start(task_id, cmd.deadline_ticks);
+            if !cmd.manual_start_stop {
+                deadline_start(task_id, cmd.deadline_ticks);
+            }
             for step in cmd.steps.iter() {
                 match step {
                     Step::SleepTicks { ticks } => Timer::after_ticks((*ticks).into()).await,
@@ -62,10 +65,27 @@ pub async fn worker(cmd: StageCommand) {
                     },
                     Step::Yield => {
                         yield_now().await;
+                    },
+                    Step::WaitTrigger => {
+                        let _ = TRIGGER.wait().await;
+                    },
+                    Step::WakeTrigger => {
+                        TRIGGER.wake_all();
+                    },
+                    Step::ManualDeadlineStart => {
+                        assert!(cmd.manual_start_stop);
+                        deadline_start(task_id, cmd.deadline_ticks);
+                        yield_now().await;
+                    }
+                    Step::ManualDeadlineStop => {
+                        assert!(cmd.manual_start_stop);
+                        deadline_stop(task_id);
                     }
                 }
             }
-            deadline_stop(task_id);
+            if !cmd.manual_start_stop {
+                deadline_stop(task_id);
+            }
 
             if !cmd.loops {
                 break;

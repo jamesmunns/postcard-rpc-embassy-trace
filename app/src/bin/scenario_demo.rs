@@ -59,6 +59,7 @@ async fn inner_main() -> Result<(), String> {
                 deadline_ticks: 16600, // if i % 2 == 0 { 30000 } else { 16600 },
                 loop_delay_ticks: 0,
                 start_delay_ticks: i as u64 * 150, // if i % 2 == 0 { i as u64 * 150 } else { 32768 * 3 },
+                manual_start_stop: false,
             }
         ).await.unwrap().unwrap();
     }

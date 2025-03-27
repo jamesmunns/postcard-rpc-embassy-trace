@@ -120,9 +120,7 @@ define_dispatch! {
         | StageTaskEndpoint         | async     | stage_task                    |
         | StartTasksEndpoint        | async     | start_tasks                   |
         | HaltTasksEndpoint         | async     | halt_tasks                    |
-    // | StageTaskEndpoint         | StageCommand  | StageResponse         | "task/stage"                  |
-    // | StartTasksEndpoint        | ()            | StartResponse         | "task/start"                  |
-    // | HaltTasksEndpoint         | ()            | HaltClearResponse     | "task/haltclear"              |
+        | IsDrsEndpoint             | blocking  | is_drs                        |
     };
 
     // Topics IN are messages we receive from the client, but that we do not reply

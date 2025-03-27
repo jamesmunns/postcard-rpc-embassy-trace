@@ -1,0 +1,1043 @@
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 0,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000064, dur: 129, deadline: 363, pass?: true
+WRK-00006E, dur: 131106, deadline: 139264, pass?: true
+Total Events: 2885
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  98.93%, POLL:   0.79%, SCHD:   0.28%
+ MAIN_TASK: IDLE:  99.97%, ACTV:   0.02%, WAIT:   0.01%, WAKE: 0006, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.94%, ACTV:   0.05%, WAIT:   0.01%, WAKE: 0005, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00006E: IDLE:  99.97%, ACTV:   0.02%, WAIT:   0.02%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  99.24%, ACTV:   0.36%, WAIT:   0.40%, WAKE: 0319, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  99.08%, ACTV:   0.34%, WAIT:   0.58%, WAKE: 0060, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 1,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131195, deadline: 491520, pass?: true
+WRK-000064, dur: 195, deadline: 363, pass?: true
+WRK-00006E, dur: 131122, deadline: 139264, pass?: true
+Total Events: 3404
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  98.32%, POLL:   1.34%, SCHD:   0.34%
+ MAIN_TASK: IDLE:  99.95%, ACTV:   0.03%, WAIT:   0.02%, WAKE: 0010, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  99.52%, ACTV:   0.44%, WAIT:   0.04%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.91%, ACTV:   0.05%, WAIT:   0.04%, WAKE: 0005, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00006E: IDLE:  99.96%, ACTV:   0.02%, WAIT:   0.02%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  99.08%, ACTV:   0.42%, WAIT:   0.50%, WAKE: 0373, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  98.89%, ACTV:   0.39%, WAIT:   0.72%, WAKE: 0068, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.02%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 2,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131216, deadline: 491520, pass?: true
+WRK-000001, dur: 131282, deadline: 491550, pass?: true
+WRK-000064, dur: 286, deadline: 363, pass?: true
+WRK-00006E, dur: 131140, deadline: 139264, pass?: true
+Total Events: 3489
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  97.88%, POLL:   1.77%, SCHD:   0.36%
+ MAIN_TASK: IDLE:  99.95%, ACTV:   0.03%, WAIT:   0.02%, WAKE: 0009, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  99.30%, ACTV:   0.44%, WAIT:   0.27%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  99.29%, ACTV:   0.44%, WAIT:   0.27%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.86%, ACTV:   0.05%, WAIT:   0.09%, WAKE: 0005, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00006E: IDLE:  99.95%, ACTV:   0.02%, WAIT:   0.03%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  98.96%, ACTV:   0.42%, WAIT:   0.62%, WAKE: 0384, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  98.81%, ACTV:   0.40%, WAIT:   0.79%, WAKE: 0064, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0003, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 3,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131232, deadline: 491520, pass?: true
+WRK-000001, dur: 131298, deadline: 491550, pass?: true
+WRK-000002, dur: 131364, deadline: 491580, pass?: true
+WRK-000064, dur: 330, deadline: 363, pass?: true
+WRK-00006E, dur: 131154, deadline: 139264, pass?: true
+Total Events: 4019
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  97.30%, POLL:   2.29%, SCHD:   0.42%
+ MAIN_TASK: IDLE:  99.94%, ACTV:   0.04%, WAIT:   0.02%, WAKE: 0009, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  99.09%, ACTV:   0.43%, WAIT:   0.48%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  99.07%, ACTV:   0.44%, WAIT:   0.49%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  99.06%, ACTV:   0.44%, WAIT:   0.50%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.86%, ACTV:   0.05%, WAIT:   0.10%, WAKE: 0005, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00006E: IDLE:  99.94%, ACTV:   0.03%, WAIT:   0.02%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  98.92%, ACTV:   0.47%, WAIT:   0.61%, WAKE: 0433, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  98.71%, ACTV:   0.45%, WAIT:   0.85%, WAKE: 0080, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0003, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 4,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131235, deadline: 491520, pass?: true
+WRK-000001, dur: 131302, deadline: 491550, pass?: true
+WRK-000002, dur: 131368, deadline: 491580, pass?: true
+WRK-000003, dur: 131434, deadline: 491610, pass?: true
+WRK-000064, dur: 407, deadline: 363, pass?: false
+WRK-00006E, dur: 131154, deadline: 139264, pass?: true
+Total Events: 4556
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  96.76%, POLL:   2.79%, SCHD:   0.45%
+ MAIN_TASK: IDLE:  99.78%, ACTV:   0.05%, WAIT:   0.17%, WAKE: 0011, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  98.89%, ACTV:   0.42%, WAIT:   0.69%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  98.88%, ACTV:   0.43%, WAIT:   0.69%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  98.86%, ACTV:   0.44%, WAIT:   0.70%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  98.85%, ACTV:   0.44%, WAIT:   0.72%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.82%, ACTV:   0.05%, WAIT:   0.13%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0044
+WRK-00006E: IDLE:  99.94%, ACTV:   0.04%, WAIT:   0.03%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  98.80%, ACTV:   0.52%, WAIT:   0.68%, WAKE: 0487, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  98.46%, ACTV:   0.50%, WAIT:   1.04%, WAKE: 0092, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.81%, ACTV:   0.01%, WAIT:   0.18%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 5,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WARN: idle -> active?
+WRK-000000, dur: 131254, deadline: 491520, pass?: true
+WRK-000001, dur: 131320, deadline: 491550, pass?: true
+WRK-000002, dur: 131386, deadline: 491580, pass?: true
+WRK-000003, dur: 131452, deadline: 491610, pass?: true
+WRK-000004, dur: 131519, deadline: 491640, pass?: true
+WRK-000064, dur: 463, deadline: 363, pass?: false
+WRK-00006E, dur: 131170, deadline: 139264, pass?: true
+Total Events: 5119
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  96.25%, POLL:   3.27%, SCHD:   0.48%
+ MAIN_TASK: IDLE:  99.93%, ACTV:   0.05%, WAIT:   0.02%, WAKE: 0012, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  98.71%, ACTV:   0.41%, WAIT:   0.88%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  98.70%, ACTV:   0.42%, WAIT:   0.89%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  98.68%, ACTV:   0.42%, WAIT:   0.90%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  98.66%, ACTV:   0.43%, WAIT:   0.91%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  98.63%, ACTV:   0.44%, WAIT:   0.93%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.80%, ACTV:   0.05%, WAIT:   0.15%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0100
+WRK-00006E: IDLE:  99.93%, ACTV:   0.04%, WAIT:   0.03%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  98.77%, ACTV:   0.57%, WAIT:   0.66%, WAKE: 0546, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  98.45%, ACTV:   0.56%, WAIT:   0.99%, WAKE: 0101, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 6,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131274, deadline: 491520, pass?: true
+WRK-000001, dur: 131340, deadline: 491550, pass?: true
+WRK-000002, dur: 131406, deadline: 491580, pass?: true
+WRK-000003, dur: 131472, deadline: 491610, pass?: true
+WRK-000004, dur: 131539, deadline: 491640, pass?: true
+WRK-000005, dur: 131605, deadline: 491670, pass?: true
+WRK-000064, dur: 531, deadline: 363, pass?: false
+WRK-00006E, dur: 131187, deadline: 139264, pass?: true
+Total Events: 5912
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  95.59%, POLL:   3.84%, SCHD:   0.57%
+ MAIN_TASK: IDLE:  99.91%, ACTV:   0.06%, WAIT:   0.03%, WAKE: 0016, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  98.50%, ACTV:   0.41%, WAIT:   1.09%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  98.48%, ACTV:   0.42%, WAIT:   1.11%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  98.46%, ACTV:   0.42%, WAIT:   1.12%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  98.44%, ACTV:   0.43%, WAIT:   1.14%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  98.41%, ACTV:   0.43%, WAIT:   1.15%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  98.38%, ACTV:   0.44%, WAIT:   1.18%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.77%, ACTV:   0.05%, WAIT:   0.18%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0168
+WRK-00006E: IDLE:  99.92%, ACTV:   0.05%, WAIT:   0.03%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  98.42%, ACTV:   0.65%, WAIT:   0.92%, WAKE: 0632, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  98.05%, ACTV:   0.65%, WAIT:   1.30%, WAKE: 0112, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 7,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131291, deadline: 491520, pass?: true
+WRK-000001, dur: 131358, deadline: 491550, pass?: true
+WRK-000002, dur: 131424, deadline: 491580, pass?: true
+WRK-000003, dur: 131490, deadline: 491610, pass?: true
+WRK-000004, dur: 131556, deadline: 491640, pass?: true
+WRK-000005, dur: 131623, deadline: 491670, pass?: true
+WRK-000006, dur: 131689, deadline: 491700, pass?: true
+WRK-000064, dur: 597, deadline: 363, pass?: false
+WRK-00006E, dur: 131202, deadline: 139264, pass?: true
+Total Events: 6746
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  95.06%, POLL:   4.31%, SCHD:   0.63%
+ MAIN_TASK: IDLE:  99.89%, ACTV:   0.06%, WAIT:   0.04%, WAKE: 0020, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  98.36%, ACTV:   0.40%, WAIT:   1.25%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  98.33%, ACTV:   0.40%, WAIT:   1.27%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  98.31%, ACTV:   0.41%, WAIT:   1.28%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  98.29%, ACTV:   0.41%, WAIT:   1.30%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  98.26%, ACTV:   0.42%, WAIT:   1.32%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  98.23%, ACTV:   0.42%, WAIT:   1.35%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  98.21%, ACTV:   0.43%, WAIT:   1.36%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.75%, ACTV:   0.05%, WAIT:   0.21%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0234
+WRK-00006E: IDLE:  99.92%, ACTV:   0.05%, WAIT:   0.03%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  98.41%, ACTV:   0.72%, WAIT:   0.87%, WAKE: 0709, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  97.98%, ACTV:   0.74%, WAIT:   1.29%, WAKE: 0114, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 8,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131320, deadline: 491520, pass?: true
+WRK-000001, dur: 131387, deadline: 491550, pass?: true
+WRK-000002, dur: 131453, deadline: 491580, pass?: true
+WRK-000003, dur: 131519, deadline: 491610, pass?: true
+WRK-000004, dur: 131585, deadline: 491640, pass?: true
+WRK-000005, dur: 131652, deadline: 491670, pass?: true
+WRK-000006, dur: 131718, deadline: 491700, pass?: true
+WRK-000007, dur: 131784, deadline: 491730, pass?: true
+WRK-000064, dur: 665, deadline: 363, pass?: false
+WRK-00006E, dur: 131219, deadline: 139264, pass?: true
+Total Events: 6966
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  94.59%, POLL:   4.75%, SCHD:   0.66%
+ MAIN_TASK: IDLE:  99.90%, ACTV:   0.07%, WAIT:   0.03%, WAKE: 0016, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  98.14%, ACTV:   0.40%, WAIT:   1.46%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  98.11%, ACTV:   0.40%, WAIT:   1.48%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  98.09%, ACTV:   0.41%, WAIT:   1.50%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  98.06%, ACTV:   0.41%, WAIT:   1.52%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  98.04%, ACTV:   0.42%, WAIT:   1.54%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  98.01%, ACTV:   0.43%, WAIT:   1.57%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  97.98%, ACTV:   0.43%, WAIT:   1.59%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  97.95%, ACTV:   0.44%, WAIT:   1.61%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.72%, ACTV:   0.05%, WAIT:   0.24%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0302
+WRK-00006E: IDLE:  99.90%, ACTV:   0.06%, WAIT:   0.04%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  98.16%, ACTV:   0.74%, WAIT:   1.10%, WAKE: 0730, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  97.92%, ACTV:   0.76%, WAIT:   1.33%, WAKE: 0129, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 9,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131314, deadline: 491520, pass?: true
+WRK-000001, dur: 131381, deadline: 491550, pass?: true
+WRK-000002, dur: 131447, deadline: 491580, pass?: true
+WRK-000003, dur: 131513, deadline: 491610, pass?: true
+WRK-000004, dur: 131579, deadline: 491640, pass?: true
+WRK-000005, dur: 131646, deadline: 491670, pass?: true
+WRK-000006, dur: 131712, deadline: 491700, pass?: true
+WRK-000007, dur: 131778, deadline: 491730, pass?: true
+WRK-000008, dur: 131844, deadline: 491760, pass?: true
+WRK-000064, dur: 733, deadline: 363, pass?: false
+WRK-00006E, dur: 131219, deadline: 139264, pass?: true
+Total Events: 7243
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  94.19%, POLL:   5.14%, SCHD:   0.67%
+ MAIN_TASK: IDLE:  99.88%, ACTV:   0.07%, WAIT:   0.05%, WAKE: 0021, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  97.96%, ACTV:   0.39%, WAIT:   1.65%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  97.93%, ACTV:   0.40%, WAIT:   1.67%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  97.90%, ACTV:   0.40%, WAIT:   1.70%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  97.87%, ACTV:   0.41%, WAIT:   1.72%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  97.85%, ACTV:   0.41%, WAIT:   1.74%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  97.81%, ACTV:   0.42%, WAIT:   1.77%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  97.78%, ACTV:   0.43%, WAIT:   1.80%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  97.74%, ACTV:   0.43%, WAIT:   1.82%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  97.72%, ACTV:   0.44%, WAIT:   1.85%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.69%, ACTV:   0.05%, WAIT:   0.26%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0370
+WRK-00006E: IDLE:  99.90%, ACTV:   0.07%, WAIT:   0.04%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  98.11%, ACTV:   0.76%, WAIT:   1.13%, WAKE: 0763, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  97.64%, ACTV:   0.78%, WAIT:   1.58%, WAKE: 0125, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0003, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 10,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131332, deadline: 491520, pass?: true
+WRK-000001, dur: 131398, deadline: 491550, pass?: true
+WRK-000002, dur: 131465, deadline: 491580, pass?: true
+WRK-000003, dur: 131531, deadline: 491610, pass?: true
+WRK-000004, dur: 131597, deadline: 491640, pass?: true
+WRK-000005, dur: 131663, deadline: 491670, pass?: true
+WRK-000006, dur: 131730, deadline: 491700, pass?: true
+WRK-000007, dur: 131796, deadline: 491730, pass?: true
+WRK-000008, dur: 131862, deadline: 491760, pass?: true
+WRK-000009, dur: 131928, deadline: 491790, pass?: true
+WRK-000064, dur: 798, deadline: 363, pass?: false
+WRK-00006E, dur: 131235, deadline: 139264, pass?: true
+Total Events: 8367
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  93.51%, POLL:   5.72%, SCHD:   0.77%
+ MAIN_TASK: IDLE:  99.87%, ACTV:   0.08%, WAIT:   0.05%, WAKE: 0019, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  97.77%, ACTV:   0.39%, WAIT:   1.84%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  97.74%, ACTV:   0.40%, WAIT:   1.87%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  97.71%, ACTV:   0.40%, WAIT:   1.89%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  97.68%, ACTV:   0.41%, WAIT:   1.92%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  97.64%, ACTV:   0.41%, WAIT:   1.95%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  97.61%, ACTV:   0.42%, WAIT:   1.97%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  97.58%, ACTV:   0.42%, WAIT:   2.00%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  97.54%, ACTV:   0.43%, WAIT:   2.03%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  97.51%, ACTV:   0.43%, WAIT:   2.06%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  97.47%, ACTV:   0.44%, WAIT:   2.09%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.65%, ACTV:   0.05%, WAIT:   0.30%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0435
+WRK-00006E: IDLE:  99.88%, ACTV:   0.07%, WAIT:   0.05%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  97.35%, ACTV:   0.85%, WAIT:   1.79%, WAKE: 0883, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  97.09%, ACTV:   0.90%, WAIT:   2.02%, WAKE: 0141, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 11,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131351, deadline: 491520, pass?: true
+WRK-000001, dur: 131417, deadline: 491550, pass?: true
+WRK-000002, dur: 131483, deadline: 491580, pass?: true
+WRK-000003, dur: 131549, deadline: 491610, pass?: true
+WRK-000004, dur: 131616, deadline: 491640, pass?: true
+WRK-000005, dur: 131682, deadline: 491670, pass?: true
+WRK-000006, dur: 131748, deadline: 491700, pass?: true
+WRK-000007, dur: 131814, deadline: 491730, pass?: true
+WRK-000008, dur: 131881, deadline: 491760, pass?: true
+WRK-000009, dur: 131947, deadline: 491790, pass?: true
+WRK-00000A, dur: 132013, deadline: 491820, pass?: true
+WRK-000064, dur: 897, deadline: 363, pass?: false
+WRK-00006E, dur: 131250, deadline: 139264, pass?: true
+Total Events: 8529
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  93.20%, POLL:   6.04%, SCHD:   0.77%
+ MAIN_TASK: IDLE:  99.88%, ACTV:   0.08%, WAIT:   0.04%, WAKE: 0019, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  97.63%, ACTV:   0.38%, WAIT:   1.99%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  97.60%, ACTV:   0.39%, WAIT:   2.02%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  97.57%, ACTV:   0.39%, WAIT:   2.04%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  97.53%, ACTV:   0.40%, WAIT:   2.07%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  97.50%, ACTV:   0.40%, WAIT:   2.10%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  97.47%, ACTV:   0.41%, WAIT:   2.13%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  97.43%, ACTV:   0.41%, WAIT:   2.16%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  97.38%, ACTV:   0.42%, WAIT:   2.20%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  97.34%, ACTV:   0.43%, WAIT:   2.23%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  97.30%, ACTV:   0.43%, WAIT:   2.27%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000A: IDLE:  97.27%, ACTV:   0.44%, WAIT:   2.29%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.62%, ACTV:   0.05%, WAIT:   0.33%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0534
+WRK-00006E: IDLE:  99.88%, ACTV:   0.08%, WAIT:   0.04%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  98.02%, ACTV:   0.86%, WAIT:   1.11%, WAKE: 0895, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  97.50%, ACTV:   0.89%, WAIT:   1.60%, WAKE: 0145, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 12,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131369, deadline: 491520, pass?: true
+WRK-000001, dur: 131436, deadline: 491550, pass?: true
+WRK-000002, dur: 131502, deadline: 491580, pass?: true
+WRK-000003, dur: 131568, deadline: 491610, pass?: true
+WRK-000004, dur: 131634, deadline: 491640, pass?: true
+WRK-000005, dur: 131700, deadline: 491670, pass?: true
+WRK-000006, dur: 131767, deadline: 491700, pass?: true
+WRK-000007, dur: 131833, deadline: 491730, pass?: true
+WRK-000008, dur: 131899, deadline: 491760, pass?: true
+WRK-000009, dur: 131965, deadline: 491790, pass?: true
+WRK-00000A, dur: 132032, deadline: 491820, pass?: true
+WRK-00000B, dur: 132098, deadline: 491850, pass?: true
+WRK-000064, dur: 933, deadline: 363, pass?: false
+WRK-00006E, dur: 131266, deadline: 139264, pass?: true
+Total Events: 8949
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  92.99%, POLL:   6.23%, SCHD:   0.78%
+ MAIN_TASK: IDLE:  99.86%, ACTV:   0.09%, WAIT:   0.05%, WAKE: 0023, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  97.47%, ACTV:   0.38%, WAIT:   2.15%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  97.43%, ACTV:   0.38%, WAIT:   2.18%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  97.40%, ACTV:   0.39%, WAIT:   2.21%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  97.37%, ACTV:   0.39%, WAIT:   2.24%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  97.33%, ACTV:   0.40%, WAIT:   2.27%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  97.30%, ACTV:   0.40%, WAIT:   2.30%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  97.26%, ACTV:   0.41%, WAIT:   2.33%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  97.22%, ACTV:   0.41%, WAIT:   2.37%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  97.18%, ACTV:   0.42%, WAIT:   2.40%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  97.14%, ACTV:   0.42%, WAIT:   2.43%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000A: IDLE:  97.10%, ACTV:   0.43%, WAIT:   2.47%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000B: IDLE:  97.06%, ACTV:   0.44%, WAIT:   2.50%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.61%, ACTV:   0.05%, WAIT:   0.35%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0570
+WRK-00006E: IDLE:  99.88%, ACTV:   0.08%, WAIT:   0.04%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  97.87%, ACTV:   0.87%, WAIT:   1.26%, WAKE: 0926, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  97.52%, ACTV:   0.89%, WAIT:   1.59%, WAKE: 0168, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 13,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131399, deadline: 491520, pass?: true
+WRK-000001, dur: 131465, deadline: 491550, pass?: true
+WRK-000002, dur: 131531, deadline: 491580, pass?: true
+WRK-000003, dur: 131598, deadline: 491610, pass?: true
+WRK-000004, dur: 131664, deadline: 491640, pass?: true
+WRK-000005, dur: 131730, deadline: 491670, pass?: true
+WRK-000006, dur: 131796, deadline: 491700, pass?: true
+WRK-000007, dur: 131862, deadline: 491730, pass?: true
+WRK-000008, dur: 131929, deadline: 491760, pass?: true
+WRK-000009, dur: 131986, deadline: 491790, pass?: true
+WRK-00000A, dur: 132050, deadline: 491820, pass?: true
+WRK-00000B, dur: 132116, deadline: 491850, pass?: true
+WRK-00000C, dur: 132182, deadline: 491880, pass?: true
+WRK-000064, dur: 999, deadline: 363, pass?: false
+WRK-00006E, dur: 131282, deadline: 139264, pass?: true
+Total Events: 9509
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  92.49%, POLL:   6.68%, SCHD:   0.82%
+ MAIN_TASK: IDLE:  99.87%, ACTV:   0.09%, WAIT:   0.05%, WAKE: 0025, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  97.29%, ACTV:   0.38%, WAIT:   2.34%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  97.25%, ACTV:   0.38%, WAIT:   2.37%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  97.21%, ACTV:   0.39%, WAIT:   2.41%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  97.17%, ACTV:   0.39%, WAIT:   2.44%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  97.14%, ACTV:   0.40%, WAIT:   2.47%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  97.10%, ACTV:   0.40%, WAIT:   2.50%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  97.06%, ACTV:   0.41%, WAIT:   2.54%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  97.02%, ACTV:   0.41%, WAIT:   2.57%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  96.98%, ACTV:   0.42%, WAIT:   2.61%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  96.93%, ACTV:   0.42%, WAIT:   2.65%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000A: IDLE:  96.88%, ACTV:   0.43%, WAIT:   2.69%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000B: IDLE:  96.84%, ACTV:   0.43%, WAIT:   2.73%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000C: IDLE:  96.79%, ACTV:   0.44%, WAIT:   2.77%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.58%, ACTV:   0.05%, WAIT:   0.38%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0636
+WRK-00006E: IDLE:  99.86%, ACTV:   0.09%, WAIT:   0.05%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  97.54%, ACTV:   0.92%, WAIT:   1.55%, WAKE: 0979, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  97.12%, ACTV:   0.94%, WAIT:   1.93%, WAKE: 0168, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 14,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131403, deadline: 491520, pass?: true
+WRK-000001, dur: 131469, deadline: 491550, pass?: true
+WRK-000002, dur: 131535, deadline: 491580, pass?: true
+WRK-000003, dur: 131590, deadline: 491610, pass?: true
+WRK-000004, dur: 131657, deadline: 491640, pass?: true
+WRK-000005, dur: 131723, deadline: 491670, pass?: true
+WRK-000006, dur: 131789, deadline: 491700, pass?: true
+WRK-000007, dur: 131855, deadline: 491730, pass?: true
+WRK-000008, dur: 131922, deadline: 491760, pass?: true
+WRK-000009, dur: 131988, deadline: 491790, pass?: true
+WRK-00000A, dur: 132054, deadline: 491820, pass?: true
+WRK-00000B, dur: 132120, deadline: 491850, pass?: true
+WRK-00000C, dur: 132188, deadline: 491880, pass?: true
+WRK-00000D, dur: 132254, deadline: 491910, pass?: true
+WRK-000064, dur: 1087, deadline: 363, pass?: false
+WRK-00006E, dur: 131282, deadline: 139264, pass?: true
+Total Events: 9879
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  91.85%, POLL:   7.28%, SCHD:   0.86%
+ MAIN_TASK: IDLE:  99.85%, ACTV:   0.10%, WAIT:   0.05%, WAKE: 0024, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  97.11%, ACTV:   0.37%, WAIT:   2.51%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  97.08%, ACTV:   0.38%, WAIT:   2.55%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  97.04%, ACTV:   0.38%, WAIT:   2.58%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  97.00%, ACTV:   0.39%, WAIT:   2.62%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  96.96%, ACTV:   0.39%, WAIT:   2.65%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  96.92%, ACTV:   0.40%, WAIT:   2.68%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  96.88%, ACTV:   0.40%, WAIT:   2.72%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  96.83%, ACTV:   0.41%, WAIT:   2.76%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  96.79%, ACTV:   0.41%, WAIT:   2.80%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  96.75%, ACTV:   0.42%, WAIT:   2.83%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000A: IDLE:  96.70%, ACTV:   0.42%, WAIT:   2.88%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000B: IDLE:  96.65%, ACTV:   0.43%, WAIT:   2.92%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000C: IDLE:  96.61%, ACTV:   0.44%, WAIT:   2.96%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000D: IDLE:  96.55%, ACTV:   0.44%, WAIT:   3.00%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.54%, ACTV:   0.05%, WAIT:   0.41%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0724
+WRK-00006E: IDLE:  99.85%, ACTV:   0.09%, WAIT:   0.06%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  97.44%, ACTV:   0.97%, WAIT:   1.60%, WAKE: 1012, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  97.17%, ACTV:   1.01%, WAIT:   1.82%, WAKE: 0176, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 15,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131422, deadline: 491520, pass?: true
+WRK-000001, dur: 131488, deadline: 491550, pass?: true
+WRK-000002, dur: 131555, deadline: 491580, pass?: true
+WRK-000003, dur: 131621, deadline: 491610, pass?: true
+WRK-000004, dur: 131687, deadline: 491640, pass?: true
+WRK-000005, dur: 131753, deadline: 491670, pass?: true
+WRK-000006, dur: 131819, deadline: 491700, pass?: true
+WRK-000007, dur: 131886, deadline: 491730, pass?: true
+WRK-000008, dur: 131952, deadline: 491760, pass?: true
+WRK-000009, dur: 132018, deadline: 491790, pass?: true
+WRK-00000A, dur: 132084, deadline: 491820, pass?: true
+WRK-00000B, dur: 132151, deadline: 491850, pass?: true
+WRK-00000C, dur: 132217, deadline: 491880, pass?: true
+WRK-00000D, dur: 132282, deadline: 491910, pass?: true
+WRK-00000E, dur: 132348, deadline: 491940, pass?: true
+WRK-000064, dur: 1135, deadline: 363, pass?: false
+WRK-00006E, dur: 131310, deadline: 139264, pass?: true
+Total Events: 10392
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  91.47%, POLL:   7.62%, SCHD:   0.91%
+ MAIN_TASK: IDLE:  99.81%, ACTV:   0.10%, WAIT:   0.09%, WAKE: 0025, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  96.97%, ACTV:   0.37%, WAIT:   2.66%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  96.93%, ACTV:   0.37%, WAIT:   2.69%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  96.89%, ACTV:   0.38%, WAIT:   2.73%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  96.85%, ACTV:   0.38%, WAIT:   2.77%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  96.81%, ACTV:   0.39%, WAIT:   2.80%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  96.77%, ACTV:   0.39%, WAIT:   2.83%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  96.73%, ACTV:   0.40%, WAIT:   2.87%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  96.69%, ACTV:   0.40%, WAIT:   2.91%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  96.64%, ACTV:   0.41%, WAIT:   2.95%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  96.60%, ACTV:   0.41%, WAIT:   2.99%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000A: IDLE:  96.55%, ACTV:   0.42%, WAIT:   3.03%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000B: IDLE:  96.50%, ACTV:   0.42%, WAIT:   3.08%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000C: IDLE:  96.45%, ACTV:   0.43%, WAIT:   3.12%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000D: IDLE:  96.40%, ACTV:   0.43%, WAIT:   3.17%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000E: IDLE:  96.34%, ACTV:   0.44%, WAIT:   3.22%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.52%, ACTV:   0.05%, WAIT:   0.43%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0772
+WRK-00006E: IDLE:  99.84%, ACTV:   0.10%, WAIT:   0.06%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  96.87%, ACTV:   0.99%, WAIT:   2.15%, WAKE: 1070, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  96.64%, ACTV:   1.04%, WAIT:   2.32%, WAKE: 0181, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.89%, ACTV:   0.01%, WAIT:   0.10%, WAKE: 0011, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 16,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+WARN: idle -> active?
+Starting in 3s:
+WRK-000000, dur: 131428, deadline: 491520, pass?: true
+WRK-000001, dur: 131494, deadline: 491550, pass?: true
+WRK-000002, dur: 131560, deadline: 491580, pass?: true
+WRK-000003, dur: 131627, deadline: 491610, pass?: true
+WRK-000004, dur: 131693, deadline: 491640, pass?: true
+WRK-000005, dur: 131759, deadline: 491670, pass?: true
+WRK-000006, dur: 131825, deadline: 491700, pass?: true
+WRK-000007, dur: 131892, deadline: 491730, pass?: true
+WRK-000008, dur: 131958, deadline: 491760, pass?: true
+WRK-000009, dur: 132024, deadline: 491790, pass?: true
+WRK-00000A, dur: 132090, deadline: 491820, pass?: true
+WRK-00000B, dur: 132157, deadline: 491850, pass?: true
+WRK-00000C, dur: 132223, deadline: 491880, pass?: true
+WRK-00000D, dur: 132289, deadline: 491910, pass?: true
+WRK-00000E, dur: 132355, deadline: 491940, pass?: true
+WRK-00000F, dur: 132422, deadline: 491970, pass?: true
+WRK-000064, dur: 1200, deadline: 363, pass?: false
+WRK-00006E, dur: 131314, deadline: 139264, pass?: true
+Total Events: 10917
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  91.05%, POLL:   8.02%, SCHD:   0.93%
+ MAIN_TASK: IDLE:  99.85%, ACTV:   0.10%, WAIT:   0.05%, WAKE: 0026, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  96.81%, ACTV:   0.36%, WAIT:   2.82%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  96.77%, ACTV:   0.37%, WAIT:   2.86%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  96.73%, ACTV:   0.37%, WAIT:   2.89%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  96.69%, ACTV:   0.38%, WAIT:   2.93%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  96.65%, ACTV:   0.38%, WAIT:   2.97%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  96.61%, ACTV:   0.39%, WAIT:   3.00%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  96.57%, ACTV:   0.39%, WAIT:   3.04%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  96.52%, ACTV:   0.40%, WAIT:   3.09%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  96.47%, ACTV:   0.40%, WAIT:   3.13%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  96.43%, ACTV:   0.41%, WAIT:   3.17%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000A: IDLE:  96.38%, ACTV:   0.41%, WAIT:   3.21%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000B: IDLE:  96.33%, ACTV:   0.42%, WAIT:   3.26%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000C: IDLE:  96.27%, ACTV:   0.42%, WAIT:   3.31%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000D: IDLE:  96.22%, ACTV:   0.43%, WAIT:   3.35%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000E: IDLE:  96.17%, ACTV:   0.44%, WAIT:   3.40%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000F: IDLE:  96.11%, ACTV:   0.44%, WAIT:   3.45%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.49%, ACTV:   0.05%, WAIT:   0.46%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0837
+WRK-00006E: IDLE:  99.84%, ACTV:   0.11%, WAIT:   0.05%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  97.35%, ACTV:   1.03%, WAIT:   1.62%, WAKE: 1118, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  96.99%, ACTV:   1.09%, WAIT:   1.92%, WAKE: 0187, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 17,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131448, deadline: 491520, pass?: true
+WRK-000001, dur: 131514, deadline: 491550, pass?: true
+WRK-000002, dur: 131580, deadline: 491580, pass?: true
+WRK-000003, dur: 131647, deadline: 491610, pass?: true
+WRK-000004, dur: 131713, deadline: 491640, pass?: true
+WRK-000005, dur: 131779, deadline: 491670, pass?: true
+WRK-000006, dur: 131845, deadline: 491700, pass?: true
+WRK-000007, dur: 131912, deadline: 491730, pass?: true
+WRK-000008, dur: 131978, deadline: 491760, pass?: true
+WRK-000009, dur: 132044, deadline: 491790, pass?: true
+WRK-00000A, dur: 132110, deadline: 491820, pass?: true
+WRK-00000B, dur: 132177, deadline: 491850, pass?: true
+WRK-00000C, dur: 132243, deadline: 491880, pass?: true
+WRK-00000D, dur: 132309, deadline: 491910, pass?: true
+WRK-00000E, dur: 132375, deadline: 491940, pass?: true
+WRK-00000F, dur: 132442, deadline: 491970, pass?: true
+WRK-000010, dur: 132508, deadline: 492000, pass?: true
+WRK-000064, dur: 1268, deadline: 363, pass?: false
+WRK-00006E, dur: 131331, deadline: 139264, pass?: true
+Total Events: 11207
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  90.71%, POLL:   8.34%, SCHD:   0.96%
+ MAIN_TASK: IDLE:  99.69%, ACTV:   0.10%, WAIT:   0.21%, WAKE: 0027, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  96.66%, ACTV:   0.36%, WAIT:   2.98%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  96.62%, ACTV:   0.36%, WAIT:   3.02%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  96.58%, ACTV:   0.37%, WAIT:   3.06%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  96.54%, ACTV:   0.37%, WAIT:   3.09%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  96.49%, ACTV:   0.38%, WAIT:   3.13%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  96.45%, ACTV:   0.38%, WAIT:   3.17%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  96.40%, ACTV:   0.39%, WAIT:   3.21%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  96.36%, ACTV:   0.39%, WAIT:   3.25%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  96.31%, ACTV:   0.40%, WAIT:   3.29%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  96.26%, ACTV:   0.40%, WAIT:   3.34%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000A: IDLE:  96.21%, ACTV:   0.41%, WAIT:   3.39%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000B: IDLE:  96.16%, ACTV:   0.41%, WAIT:   3.43%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000C: IDLE:  96.11%, ACTV:   0.42%, WAIT:   3.47%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000D: IDLE:  96.05%, ACTV:   0.42%, WAIT:   3.52%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000E: IDLE:  96.00%, ACTV:   0.43%, WAIT:   3.57%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000F: IDLE:  95.94%, ACTV:   0.43%, WAIT:   3.62%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000010: IDLE:  95.88%, ACTV:   0.44%, WAIT:   3.67%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.46%, ACTV:   0.05%, WAIT:   0.49%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0905
+WRK-00006E: IDLE:  99.84%, ACTV:   0.11%, WAIT:   0.06%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  96.91%, ACTV:   1.05%, WAIT:   2.04%, WAKE: 1147, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  96.55%, ACTV:   1.10%, WAIT:   2.36%, WAKE: 0201, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.78%, ACTV:   0.01%, WAIT:   0.21%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 18,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131466, deadline: 491520, pass?: true
+WRK-000001, dur: 131532, deadline: 491550, pass?: true
+WRK-000002, dur: 131598, deadline: 491580, pass?: true
+WRK-000003, dur: 131664, deadline: 491610, pass?: true
+WRK-000004, dur: 131731, deadline: 491640, pass?: true
+WRK-000005, dur: 131797, deadline: 491670, pass?: true
+WRK-000006, dur: 131863, deadline: 491700, pass?: true
+WRK-000007, dur: 131929, deadline: 491730, pass?: true
+WRK-000008, dur: 131996, deadline: 491760, pass?: true
+WRK-000009, dur: 132062, deadline: 491790, pass?: true
+WRK-00000A, dur: 132128, deadline: 491820, pass?: true
+WRK-00000B, dur: 132194, deadline: 491850, pass?: true
+WRK-00000C, dur: 132261, deadline: 491880, pass?: true
+WRK-00000D, dur: 132327, deadline: 491910, pass?: true
+WRK-00000E, dur: 132392, deadline: 491940, pass?: true
+WRK-00000F, dur: 132458, deadline: 491970, pass?: true
+WRK-000010, dur: 132525, deadline: 492000, pass?: true
+WRK-000011, dur: 132591, deadline: 492030, pass?: true
+WRK-000064, dur: 1335, deadline: 363, pass?: false
+WRK-00006E, dur: 131345, deadline: 139264, pass?: true
+Total Events: 11647
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  90.35%, POLL:   8.67%, SCHD:   0.98%
+ MAIN_TASK: IDLE:  99.85%, ACTV:   0.11%, WAIT:   0.04%, WAKE: 0024, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  96.53%, ACTV:   0.36%, WAIT:   3.12%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  96.49%, ACTV:   0.36%, WAIT:   3.16%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  96.44%, ACTV:   0.36%, WAIT:   3.20%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  96.40%, ACTV:   0.37%, WAIT:   3.24%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  96.35%, ACTV:   0.37%, WAIT:   3.27%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  96.31%, ACTV:   0.38%, WAIT:   3.31%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  96.26%, ACTV:   0.38%, WAIT:   3.36%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  96.21%, ACTV:   0.39%, WAIT:   3.40%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  96.17%, ACTV:   0.39%, WAIT:   3.44%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  96.12%, ACTV:   0.40%, WAIT:   3.49%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000A: IDLE:  96.06%, ACTV:   0.40%, WAIT:   3.54%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000B: IDLE:  96.01%, ACTV:   0.41%, WAIT:   3.59%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000C: IDLE:  95.96%, ACTV:   0.41%, WAIT:   3.63%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000D: IDLE:  95.90%, ACTV:   0.42%, WAIT:   3.68%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000E: IDLE:  95.84%, ACTV:   0.42%, WAIT:   3.74%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000F: IDLE:  95.78%, ACTV:   0.43%, WAIT:   3.79%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000010: IDLE:  95.73%, ACTV:   0.43%, WAIT:   3.84%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000011: IDLE:  95.66%, ACTV:   0.44%, WAIT:   3.90%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.44%, ACTV:   0.05%, WAIT:   0.52%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 0972
+WRK-00006E: IDLE:  99.83%, ACTV:   0.11%, WAIT:   0.06%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  97.38%, ACTV:   1.08%, WAIT:   1.54%, WAKE: 1189, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  96.87%, ACTV:   1.12%, WAIT:   2.01%, WAKE: 0206, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0005, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 19,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131475, deadline: 491520, pass?: true
+WRK-000001, dur: 131542, deadline: 491550, pass?: true
+WRK-000002, dur: 131608, deadline: 491580, pass?: true
+WRK-000003, dur: 131674, deadline: 491610, pass?: true
+WRK-000004, dur: 131740, deadline: 491640, pass?: true
+WRK-000005, dur: 131806, deadline: 491670, pass?: true
+WRK-000006, dur: 131873, deadline: 491700, pass?: true
+WRK-000007, dur: 131939, deadline: 491730, pass?: true
+WRK-000008, dur: 132005, deadline: 491760, pass?: true
+WRK-000009, dur: 132071, deadline: 491790, pass?: true
+WRK-00000A, dur: 132138, deadline: 491820, pass?: true
+WRK-00000B, dur: 132204, deadline: 491850, pass?: true
+WRK-00000C, dur: 132270, deadline: 491880, pass?: true
+WRK-00000D, dur: 132336, deadline: 491910, pass?: true
+WRK-00000E, dur: 132403, deadline: 491940, pass?: true
+WRK-00000F, dur: 132469, deadline: 491970, pass?: true
+WRK-000010, dur: 132535, deadline: 492000, pass?: true
+WRK-000011, dur: 132601, deadline: 492030, pass?: true
+WRK-000012, dur: 132668, deadline: 492060, pass?: true
+WRK-000064, dur: 1403, deadline: 363, pass?: false
+WRK-00006E, dur: 131352, deadline: 139264, pass?: true
+Total Events: 12231
+
+KiB/s: 0.00
+EXECUTOR:   IDLE:  90.01%, POLL:   8.98%, SCHD:   1.01%
+ MAIN_TASK: IDLE:  99.83%, ACTV:   0.12%, WAIT:   0.05%, WAKE: 0029, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+WRK-000000: IDLE:  96.40%, ACTV:   0.35%, WAIT:   3.25%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000001: IDLE:  96.36%, ACTV:   0.35%, WAIT:   3.29%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000002: IDLE:  96.31%, ACTV:   0.36%, WAIT:   3.33%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000003: IDLE:  96.27%, ACTV:   0.36%, WAIT:   3.37%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000004: IDLE:  96.22%, ACTV:   0.37%, WAIT:   3.41%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000005: IDLE:  96.18%, ACTV:   0.37%, WAIT:   3.45%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000006: IDLE:  96.13%, ACTV:   0.37%, WAIT:   3.49%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000007: IDLE:  96.08%, ACTV:   0.38%, WAIT:   3.54%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000008: IDLE:  96.03%, ACTV:   0.38%, WAIT:   3.58%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000009: IDLE:  95.99%, ACTV:   0.39%, WAIT:   3.63%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000A: IDLE:  95.93%, ACTV:   0.39%, WAIT:   3.68%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000B: IDLE:  95.88%, ACTV:   0.40%, WAIT:   3.73%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000C: IDLE:  95.82%, ACTV:   0.40%, WAIT:   3.77%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000D: IDLE:  95.77%, ACTV:   0.41%, WAIT:   3.82%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000E: IDLE:  95.71%, ACTV:   0.41%, WAIT:   3.88%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-00000F: IDLE:  95.65%, ACTV:   0.42%, WAIT:   3.93%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000010: IDLE:  95.59%, ACTV:   0.43%, WAIT:   3.99%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000011: IDLE:  95.53%, ACTV:   0.43%, WAIT:   4.04%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000012: IDLE:  95.46%, ACTV:   0.44%, WAIT:   4.10%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+WRK-000064: IDLE:  99.41%, ACTV:   0.05%, WAIT:   0.54%, WAKE: 0005, DRET: 0001, DMET: 0000, DVIO: 0001, DELT: 1040
+WRK-00006E: IDLE:  99.82%, ACTV:   0.12%, WAIT:   0.06%, WAKE: 0017, DRET: 0001, DMET: 0001, DVIO: 0000, DELT: 0000
+DRAIN_TASK: IDLE:  97.10%, ACTV:   1.11%, WAIT:   1.79%, WAKE: 1246, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  USB_TASK: IDLE:  96.36%, ACTV:   1.16%, WAIT:   2.47%, WAKE: 0220, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+  LOG_TASK: IDLE:  99.98%, ACTV:   0.01%, WAIT:   0.01%, WAKE: 0007, DRET: 0000, DMET: 0000, DVIO: 0000, DELT: 0000
+------------------------------------------------------------

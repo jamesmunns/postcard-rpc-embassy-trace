@@ -67,6 +67,10 @@ pub async fn start_tasks(context: &mut Context, _header: VarHeader, _arg: ()) ->
     }
 }
 
+pub fn is_drs(_context: &mut Context, _header: VarHeader, _arg: ()) -> bool {
+    cfg!(feature = "drs-scheduler")
+}
+
 pub async fn halt_tasks(context: &mut Context, _header: VarHeader, _arg: ()) -> HaltClearResponse {
     match context.load_state {
         LoadState::Idle => Err(HaltClearError::NotRunning),

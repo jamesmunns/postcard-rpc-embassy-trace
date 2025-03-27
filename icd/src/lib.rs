@@ -34,7 +34,8 @@ pub struct Report {
 
 // These aren't actually sent directly as we need to
 // batch them
-#[derive(Debug, Serialize, Deserialize, Schema)]
+#[cfg(not(feature = "use-std"))]
+#[derive(Debug, Serialize, Deserialize, Schema, Clone)]
 pub enum Event<'a> {
     // _embassy_trace_task_new
     TaskNew {
@@ -81,6 +82,54 @@ pub enum Event<'a> {
     }
 }
 
+#[cfg(feature = "use-std")]
+#[derive(Debug, Serialize, Deserialize, Schema, Clone)]
+pub enum Event {
+    // _embassy_trace_task_new
+    TaskNew {
+        tick: u64,
+        task_id: u32,
+    },
+    // _embassy_trace_task_exec_begin
+    TaskExecBegin {
+        tick: u64,
+        task_id: u32,
+    },
+    // _embassy_trace_task_exec_end
+    TaskExecEnd {
+        tick: u64,
+        task_id: u32,
+    },
+    // _embassy_trace_task_ready_begin
+    TaskReadyBegin {
+        tick: u64,
+        task_id: u32,
+    },
+    // _embassy_trace_executor_idle
+    ExecutorIdle {
+        tick: u64,
+    },
+    // _embassy_trace_poll_start
+    ExecutorPollStart {
+        tick: u64,
+    },
+    // task_identify
+    TaskIdentify {
+        tick: u64,
+        task_id: u32,
+        name: String,
+    },
+    DeadlineStart {
+        tick: u64,
+        task_id: u32,
+        deadline: u64,
+    },
+    DeadlineStop {
+        tick: u64,
+        task_id: u32,
+    }
+}
+
 #[derive(Debug, Serialize, Deserialize, Schema)]
 pub enum Step {
     SleepTicks {
@@ -90,6 +139,10 @@ pub enum Step {
         ticks: u32,
     },
     Yield,
+    WaitTrigger,
+    WakeTrigger,
+    ManualDeadlineStart,
+    ManualDeadlineStop,
 }
 
 #[derive(Debug, Serialize, Deserialize, Schema)]
@@ -102,6 +155,7 @@ pub struct StageCommand {
     pub deadline_ticks: u64,
     pub loop_delay_ticks: u64,
     pub start_delay_ticks: u64,
+    pub manual_start_stop: bool,
 }
 
 #[derive(Debug, Serialize, Deserialize, Schema)]
@@ -144,6 +198,7 @@ endpoints! {
     | StageTaskEndpoint         | StageCommand  | StageResponse         | "task/stage"                  |
     | StartTasksEndpoint        | ()            | StartResponse         | "task/start"                  |
     | HaltTasksEndpoint         | ()            | HaltClearResponse     | "task/haltclear"              |
+    | IsDrsEndpoint             | ()            | bool                  | "drs/is_drs"                  |
 }
 
 // incoming topics handled by our device
@@ -162,5 +217,6 @@ topics! {
     | -------                   | ---------     | ----                  | ---                           |
     | TraceReportTopic          | Report<'a>    | "trace/report"        | cfg(not(feature = "use-std")) |
     | TraceReportTopic          | Report        | "trace/report"        | cfg(feature = "use-std")      |
-    | FakeEventTopic            | Event<'a>     | "trace/fake/event"    |                               |
+    | FakeEventTopic            | Event<'a>     | "trace/fake/event"    | cfg(not(feature = "use-std")) |
+    | FakeEventTopic            | Event         | "trace/fake/event"    | cfg(feature = "use-std")      |
 }

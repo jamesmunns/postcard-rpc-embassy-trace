@@ -94,6 +94,7 @@ async fn main(spawner: Spawner) {
         deadline_ticks: 100,
         loop_delay_ticks: 0,
         start_delay_ticks: 0,
+        manual_start_stop: false,
     }));
     Timer::after_millis(100).await;
     STAGE.wake_all();

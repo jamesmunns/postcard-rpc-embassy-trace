@@ -1,0 +1,671 @@
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 0,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000064, dur: 139, deadline: 363, pass?: true
+WRK-00006E, dur: 131106, deadline: 139264, pass?: true
+Total Events: 2872
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 1,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131211, deadline: 491520, pass?: true
+WRK-000064, dur: 195, deadline: 363, pass?: true
+WRK-00006E, dur: 131138, deadline: 139264, pass?: true
+Total Events: 3108
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 2,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131213, deadline: 491520, pass?: true
+WRK-000001, dur: 131279, deadline: 491550, pass?: true
+WRK-000064, dur: 263, deadline: 363, pass?: true
+WRK-00006E, dur: 131138, deadline: 139264, pass?: true
+Total Events: 3536
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 3,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131232, deadline: 491520, pass?: true
+WRK-000001, dur: 131298, deadline: 491550, pass?: true
+WRK-000002, dur: 131364, deadline: 491580, pass?: true
+WRK-000064, dur: 329, deadline: 363, pass?: true
+WRK-00006E, dur: 131153, deadline: 139264, pass?: true
+Total Events: 4185
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 4,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131249, deadline: 491520, pass?: true
+WRK-000001, dur: 131315, deadline: 491550, pass?: true
+WRK-000002, dur: 131381, deadline: 491580, pass?: true
+WRK-000003, dur: 131448, deadline: 491610, pass?: true
+WRK-000064, dur: 397, deadline: 363, pass?: false
+WRK-00006E, dur: 131167, deadline: 139264, pass?: true
+Total Events: 4947
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 5,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131255, deadline: 491520, pass?: true
+WRK-000001, dur: 131322, deadline: 491550, pass?: true
+WRK-000002, dur: 131388, deadline: 491580, pass?: true
+WRK-000003, dur: 131454, deadline: 491610, pass?: true
+WRK-000004, dur: 131520, deadline: 491640, pass?: true
+WRK-000064, dur: 463, deadline: 363, pass?: false
+WRK-00006E, dur: 131171, deadline: 139264, pass?: true
+Total Events: 5415
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 6,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131272, deadline: 491520, pass?: true
+WRK-000001, dur: 131339, deadline: 491550, pass?: true
+WRK-000002, dur: 131405, deadline: 491580, pass?: true
+WRK-000003, dur: 131471, deadline: 491610, pass?: true
+WRK-000004, dur: 131537, deadline: 491640, pass?: true
+WRK-000005, dur: 131604, deadline: 491670, pass?: true
+WRK-000064, dur: 531, deadline: 363, pass?: false
+WRK-00006E, dur: 131186, deadline: 139264, pass?: true
+Total Events: 6084
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 7,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131291, deadline: 491520, pass?: true
+WRK-000001, dur: 131358, deadline: 491550, pass?: true
+WRK-000002, dur: 131424, deadline: 491580, pass?: true
+WRK-000003, dur: 131490, deadline: 491610, pass?: true
+WRK-000004, dur: 131556, deadline: 491640, pass?: true
+WRK-000005, dur: 131623, deadline: 491670, pass?: true
+WRK-000006, dur: 131689, deadline: 491700, pass?: true
+WRK-000064, dur: 597, deadline: 363, pass?: false
+WRK-00006E, dur: 131202, deadline: 139264, pass?: true
+Total Events: 6565
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 8,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131311, deadline: 491520, pass?: true
+WRK-000001, dur: 131377, deadline: 491550, pass?: true
+WRK-000002, dur: 131444, deadline: 491580, pass?: true
+WRK-000003, dur: 131510, deadline: 491610, pass?: true
+WRK-000004, dur: 131576, deadline: 491640, pass?: true
+WRK-000005, dur: 131642, deadline: 491670, pass?: true
+WRK-000006, dur: 131709, deadline: 491700, pass?: true
+WRK-000007, dur: 131774, deadline: 491730, pass?: true
+WRK-000064, dur: 665, deadline: 363, pass?: false
+WRK-00006E, dur: 131218, deadline: 139264, pass?: true
+Total Events: 7096
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 9,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131316, deadline: 491520, pass?: true
+WRK-000001, dur: 131382, deadline: 491550, pass?: true
+WRK-000002, dur: 131448, deadline: 491580, pass?: true
+WRK-000003, dur: 131515, deadline: 491610, pass?: true
+WRK-000004, dur: 131581, deadline: 491640, pass?: true
+WRK-000005, dur: 131647, deadline: 491670, pass?: true
+WRK-000006, dur: 131713, deadline: 491700, pass?: true
+WRK-000007, dur: 131780, deadline: 491730, pass?: true
+WRK-000008, dur: 131846, deadline: 491760, pass?: true
+WRK-000064, dur: 733, deadline: 363, pass?: false
+WRK-00006E, dur: 131220, deadline: 139264, pass?: true
+Total Events: 7775
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 10,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131331, deadline: 491520, pass?: true
+WRK-000001, dur: 131397, deadline: 491550, pass?: true
+WRK-000002, dur: 131464, deadline: 491580, pass?: true
+WRK-000003, dur: 131530, deadline: 491610, pass?: true
+WRK-000004, dur: 131596, deadline: 491640, pass?: true
+WRK-000005, dur: 131662, deadline: 491670, pass?: true
+WRK-000006, dur: 131728, deadline: 491700, pass?: true
+WRK-000007, dur: 131795, deadline: 491730, pass?: true
+WRK-000008, dur: 131861, deadline: 491760, pass?: true
+WRK-000009, dur: 131927, deadline: 491790, pass?: true
+WRK-000064, dur: 827, deadline: 363, pass?: false
+WRK-00006E, dur: 131233, deadline: 139264, pass?: true
+Total Events: 7930
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 11,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131367, deadline: 491520, pass?: true
+WRK-000001, dur: 131433, deadline: 491550, pass?: true
+WRK-000002, dur: 131499, deadline: 491580, pass?: true
+WRK-000003, dur: 131566, deadline: 491610, pass?: true
+WRK-000004, dur: 131632, deadline: 491640, pass?: true
+WRK-000005, dur: 131698, deadline: 491670, pass?: true
+WRK-000006, dur: 131764, deadline: 491700, pass?: true
+WRK-000007, dur: 131830, deadline: 491730, pass?: true
+WRK-000008, dur: 131897, deadline: 491760, pass?: true
+WRK-000009, dur: 131963, deadline: 491790, pass?: true
+WRK-00000A, dur: 132029, deadline: 491820, pass?: true
+WRK-000064, dur: 865, deadline: 363, pass?: false
+WRK-00006E, dur: 131266, deadline: 139264, pass?: true
+Total Events: 8355
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 12,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131369, deadline: 491520, pass?: true
+WRK-000001, dur: 131435, deadline: 491550, pass?: true
+WRK-000002, dur: 131502, deadline: 491580, pass?: true
+WRK-000003, dur: 131568, deadline: 491610, pass?: true
+WRK-000004, dur: 131634, deadline: 491640, pass?: true
+WRK-000005, dur: 131700, deadline: 491670, pass?: true
+WRK-000006, dur: 131767, deadline: 491700, pass?: true
+WRK-000007, dur: 131833, deadline: 491730, pass?: true
+WRK-000008, dur: 131899, deadline: 491760, pass?: true
+WRK-000009, dur: 131965, deadline: 491790, pass?: true
+WRK-00000A, dur: 132032, deadline: 491820, pass?: true
+WRK-00000B, dur: 132098, deadline: 491850, pass?: true
+WRK-000064, dur: 932, deadline: 363, pass?: false
+WRK-00006E, dur: 131266, deadline: 139264, pass?: true
+Total Events: 8899
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 13,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131388, deadline: 491520, pass?: true
+WRK-000001, dur: 131454, deadline: 491550, pass?: true
+WRK-000002, dur: 131520, deadline: 491580, pass?: true
+WRK-000003, dur: 131586, deadline: 491610, pass?: true
+WRK-000004, dur: 131653, deadline: 491640, pass?: true
+WRK-000005, dur: 131719, deadline: 491670, pass?: true
+WRK-000006, dur: 131785, deadline: 491700, pass?: true
+WRK-000007, dur: 131851, deadline: 491730, pass?: true
+WRK-000008, dur: 131918, deadline: 491760, pass?: true
+WRK-000009, dur: 131984, deadline: 491790, pass?: true
+WRK-00000A, dur: 132050, deadline: 491820, pass?: true
+WRK-00000B, dur: 132116, deadline: 491850, pass?: true
+WRK-00000C, dur: 132183, deadline: 491880, pass?: true
+WRK-000064, dur: 1000, deadline: 363, pass?: false
+WRK-00006E, dur: 131282, deadline: 139264, pass?: true
+Total Events: 9348
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 14,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131392, deadline: 491520, pass?: true
+WRK-000001, dur: 131458, deadline: 491550, pass?: true
+WRK-000002, dur: 131525, deadline: 491580, pass?: true
+WRK-000003, dur: 131591, deadline: 491610, pass?: true
+WRK-000004, dur: 131657, deadline: 491640, pass?: true
+WRK-000005, dur: 131723, deadline: 491670, pass?: true
+WRK-000006, dur: 131790, deadline: 491700, pass?: true
+WRK-000007, dur: 131856, deadline: 491730, pass?: true
+WRK-000008, dur: 131922, deadline: 491760, pass?: true
+WRK-000009, dur: 131988, deadline: 491790, pass?: true
+WRK-00000A, dur: 132054, deadline: 491820, pass?: true
+WRK-00000B, dur: 132121, deadline: 491850, pass?: true
+WRK-00000C, dur: 132187, deadline: 491880, pass?: true
+WRK-00000D, dur: 132253, deadline: 491910, pass?: true
+WRK-000064, dur: 1096, deadline: 363, pass?: false
+WRK-00006E, dur: 131282, deadline: 139264, pass?: true
+Total Events: 9717
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 15,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131412, deadline: 491520, pass?: true
+WRK-000001, dur: 131478, deadline: 491550, pass?: true
+WRK-000002, dur: 131544, deadline: 491580, pass?: true
+WRK-000003, dur: 131610, deadline: 491610, pass?: true
+WRK-000004, dur: 131677, deadline: 491640, pass?: true
+WRK-000005, dur: 131743, deadline: 491670, pass?: true
+WRK-000006, dur: 131809, deadline: 491700, pass?: true
+WRK-000007, dur: 131875, deadline: 491730, pass?: true
+WRK-000008, dur: 131942, deadline: 491760, pass?: true
+WRK-000009, dur: 132008, deadline: 491790, pass?: true
+WRK-00000A, dur: 132074, deadline: 491820, pass?: true
+WRK-00000B, dur: 132140, deadline: 491850, pass?: true
+WRK-00000C, dur: 132207, deadline: 491880, pass?: true
+WRK-00000D, dur: 132273, deadline: 491910, pass?: true
+WRK-00000E, dur: 132339, deadline: 491940, pass?: true
+WRK-000064, dur: 1143, deadline: 363, pass?: false
+WRK-00006E, dur: 131300, deadline: 139264, pass?: true
+Total Events: 10278
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 16,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131440, deadline: 491520, pass?: true
+WRK-000001, dur: 131506, deadline: 491550, pass?: true
+WRK-000002, dur: 131573, deadline: 491580, pass?: true
+WRK-000003, dur: 131639, deadline: 491610, pass?: true
+WRK-000004, dur: 131705, deadline: 491640, pass?: true
+WRK-000005, dur: 131771, deadline: 491670, pass?: true
+WRK-000006, dur: 131838, deadline: 491700, pass?: true
+WRK-000007, dur: 131904, deadline: 491730, pass?: true
+WRK-000008, dur: 131970, deadline: 491760, pass?: true
+WRK-000009, dur: 132036, deadline: 491790, pass?: true
+WRK-00000A, dur: 132103, deadline: 491820, pass?: true
+WRK-00000B, dur: 132169, deadline: 491850, pass?: true
+WRK-00000C, dur: 132235, deadline: 491880, pass?: true
+WRK-00000D, dur: 132301, deadline: 491910, pass?: true
+WRK-00000E, dur: 132367, deadline: 491940, pass?: true
+WRK-00000F, dur: 132434, deadline: 491970, pass?: true
+WRK-000064, dur: 1200, deadline: 363, pass?: false
+WRK-00006E, dur: 131326, deadline: 139264, pass?: true
+Total Events: 10587
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 17,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131457, deadline: 491520, pass?: true
+WRK-000001, dur: 131523, deadline: 491550, pass?: true
+WRK-000002, dur: 131589, deadline: 491580, pass?: true
+WRK-000003, dur: 131656, deadline: 491610, pass?: true
+WRK-000004, dur: 131722, deadline: 491640, pass?: true
+WRK-000005, dur: 131788, deadline: 491670, pass?: true
+WRK-000006, dur: 131854, deadline: 491700, pass?: true
+WRK-000007, dur: 131921, deadline: 491730, pass?: true
+WRK-000008, dur: 131987, deadline: 491760, pass?: true
+WRK-000009, dur: 132053, deadline: 491790, pass?: true
+WRK-00000A, dur: 132119, deadline: 491820, pass?: true
+WRK-00000B, dur: 132186, deadline: 491850, pass?: true
+WRK-00000C, dur: 132252, deadline: 491880, pass?: true
+WRK-00000D, dur: 132318, deadline: 491910, pass?: true
+WRK-00000E, dur: 132384, deadline: 491940, pass?: true
+WRK-00000F, dur: 132451, deadline: 491970, pass?: true
+WRK-000010, dur: 132517, deadline: 492000, pass?: true
+WRK-000064, dur: 1267, deadline: 363, pass?: false
+WRK-00006E, dur: 131340, deadline: 139264, pass?: true
+Total Events: 11091
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 18,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131469, deadline: 491520, pass?: true
+WRK-000001, dur: 131535, deadline: 491550, pass?: true
+WRK-000002, dur: 131601, deadline: 491580, pass?: true
+WRK-000003, dur: 131667, deadline: 491610, pass?: true
+WRK-000004, dur: 131734, deadline: 491640, pass?: true
+WRK-000005, dur: 131800, deadline: 491670, pass?: true
+WRK-000006, dur: 131866, deadline: 491700, pass?: true
+WRK-000007, dur: 131932, deadline: 491730, pass?: true
+WRK-000008, dur: 131999, deadline: 491760, pass?: true
+WRK-000009, dur: 132065, deadline: 491790, pass?: true
+WRK-00000A, dur: 132131, deadline: 491820, pass?: true
+WRK-00000B, dur: 132197, deadline: 491850, pass?: true
+WRK-00000C, dur: 132263, deadline: 491880, pass?: true
+WRK-00000D, dur: 132330, deadline: 491910, pass?: true
+WRK-00000E, dur: 132396, deadline: 491940, pass?: true
+WRK-00000F, dur: 132462, deadline: 491970, pass?: true
+WRK-000010, dur: 132528, deadline: 492000, pass?: true
+WRK-000011, dur: 132595, deadline: 492030, pass?: true
+WRK-000064, dur: 1352, deadline: 363, pass?: false
+WRK-00006E, dur: 131349, deadline: 139264, pass?: true
+Total Events: 11813
+------------------------------------------------------------
+CFG:
+BurstConfig {
+    load_tasks: 19,
+    load_deadline_base: 491520,
+    load_deadline_incr: 30,
+    load_deadline_work: 65,
+    timing_pulse_interval: 8192,
+    crit_start_delay: 65536,
+    crit_work_ticks: 33,
+    crit_sleep_ticks: 11,
+    crit_deadline_ticks: 363,
+    crit_iters: 3,
+}
+
+Halting...
+Halted.
+Is DRS?: false
+Running...
+Sending tasks...
+Starting in 3s:
+WRK-000000, dur: 131506, deadline: 491520, pass?: true
+WRK-000001, dur: 131572, deadline: 491550, pass?: true
+WRK-000002, dur: 131638, deadline: 491580, pass?: true
+WRK-000003, dur: 131704, deadline: 491610, pass?: true
+WRK-000004, dur: 131771, deadline: 491640, pass?: true
+WRK-000005, dur: 131837, deadline: 491670, pass?: true
+WRK-000006, dur: 131903, deadline: 491700, pass?: true
+WRK-000007, dur: 131969, deadline: 491730, pass?: true
+WRK-000008, dur: 132035, deadline: 491760, pass?: true
+WRK-000009, dur: 132102, deadline: 491790, pass?: true
+WRK-00000A, dur: 132168, deadline: 491820, pass?: true
+WRK-00000B, dur: 132234, deadline: 491850, pass?: true
+WRK-00000C, dur: 132300, deadline: 491880, pass?: true
+WRK-00000D, dur: 132367, deadline: 491910, pass?: true
+WRK-00000E, dur: 132434, deadline: 491940, pass?: true
+WRK-00000F, dur: 132500, deadline: 491970, pass?: true
+WRK-000010, dur: 132566, deadline: 492000, pass?: true
+WRK-000011, dur: 132633, deadline: 492030, pass?: true
+WRK-000012, dur: 132699, deadline: 492060, pass?: true
+WRK-000064, dur: 1402, deadline: 363, pass?: false
+WRK-00006E, dur: 131382, deadline: 139264, pass?: true
+Total Events: 12140
+------------------------------------------------------------
