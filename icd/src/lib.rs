@@ -69,16 +69,25 @@ pub enum Event<'a> {
         tick: u64,
         task_id: u32,
         name: &'a str,
+    },
+    DeadlineStart {
+        tick: u64,
+        task_id: u32,
+        deadline: u64,
+    },
+    DeadlineStop {
+        tick: u64,
+        task_id: u32,
     }
 }
 
 #[derive(Debug, Serialize, Deserialize, Schema)]
 pub enum Step {
-    SleepUs {
-        us: u32,
+    SleepTicks {
+        ticks: u32,
     },
-    WorkUs {
-        us: u32,
+    WorkTicks {
+        ticks: u32,
     },
     Yield,
 }
@@ -91,6 +100,8 @@ pub struct StageCommand {
     // If loops == false, this is a single deadline
     // If loops == true, this is re-set after every completion of `steps`
     pub deadline_ticks: u64,
+    pub loop_delay_ticks: u64,
+    pub start_delay_ticks: u64,
 }
 
 #[derive(Debug, Serialize, Deserialize, Schema)]

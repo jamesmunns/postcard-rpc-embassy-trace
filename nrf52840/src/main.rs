@@ -92,6 +92,8 @@ async fn main(spawner: Spawner) {
         steps: heapless::Vec::new(),
         loops: false,
         deadline_ticks: 100,
+        loop_delay_ticks: 0,
+        start_delay_ticks: 0,
     }));
     Timer::after_millis(100).await;
     STAGE.wake_all();
@@ -112,7 +114,7 @@ async fn main(spawner: Spawner) {
 
     let (device, tx_impl, rx_impl) =
         app::STORAGE.init_poststation(driver, config, pbufs.tx_buf.as_mut_slice());
-    tx_impl.set_timeout_ms_per_frame(50).await;
+    tx_impl.set_timeout_ms_per_frame(500).await;
     let dispatcher = app::MyApp::new(context, spawner.into());
     let vkk = dispatcher.min_key_len();
     let mut server: app::AppServer = Server::new(

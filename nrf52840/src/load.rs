@@ -5,7 +5,7 @@ use embassy_time::{Instant, Timer};
 use template_icd::{StageCommand, Step};
 use maitake_sync::WaitQueue;
 
-use crate::trace::task_identify;
+use crate::trace::{deadline_start, deadline_stop, task_identify};
 
 #[cfg(feature = "drs-scheduler")]
 use embassy_executor::raw::Deadline;
@@ -16,13 +16,18 @@ pub static HALT: WaitQueue = WaitQueue::new();
 
 #[embassy_executor::task(pool_size = 50)]
 pub async fn worker(cmd: StageCommand) {
-    {
+    // Avoid infinite loops
+    if cmd.steps.is_empty() && cmd.loops {
+        panic!();
+    }
+
+    let task_id = {
         use core::fmt::Write;
         let mut name = heapless::String::<10>::new();
         let _ = name.push_str("WRK-");
         let _ = write!(&mut name, "{:06X}", cmd.ident);
-        task_identify(name.as_str()).await;
-    }
+        task_identify(name.as_str()).await
+    };
     let halt_fut = HALT.wait();
     let mut halt_fut = pin!(halt_fut);
     let _ = halt_fut.as_mut().subscribe();
@@ -35,20 +40,23 @@ pub async fn worker(cmd: StageCommand) {
         // Wait for the trigger
         let _ = stage_fut.await;
 
+        // Schedule ourselves for wakeup when the delay is over
+        #[cfg(feature = "drs-scheduler")]
+        Deadline::set_current_task_deadline_after(cmd.start_delay_ticks).await;
+        Timer::after_ticks(cmd.start_delay_ticks).await;
+
         #[cfg(feature = "drs-scheduler")]
         Deadline::set_current_task_deadline_after(cmd.deadline_ticks).await;
 
         loop {
-            if cmd.steps.is_empty() && cmd.loops {
-                panic!();
-            }
+            deadline_start(task_id, cmd.deadline_ticks);
             for step in cmd.steps.iter() {
                 match step {
-                    Step::SleepUs { us } => Timer::after_micros((*us).into()).await,
-                    Step::WorkUs { us } => {
+                    Step::SleepTicks { ticks } => Timer::after_ticks((*ticks).into()).await,
+                    Step::WorkTicks { ticks } => {
                         let now = Instant::now();
-                        let ttl = u64::from(*us);
-                        while now.elapsed().as_micros() < ttl {
+                        let ttl = u64::from(*ticks);
+                        while now.elapsed().as_ticks() < ttl {
                             // busy!
                         }
                     },
@@ -57,10 +65,12 @@ pub async fn worker(cmd: StageCommand) {
                     }
                 }
             }
+            deadline_stop(task_id);
 
             if !cmd.loops {
                 break;
             } else {
+                Timer::after_ticks(cmd.loop_delay_ticks).await;
                 #[cfg(feature = "drs-scheduler")]
                 Deadline::set_current_task_deadline_after(cmd.deadline_ticks).await;
             }
@@ -69,6 +79,9 @@ pub async fn worker(cmd: StageCommand) {
 
     match select(run_fut, halt_fut).await {
         Either::First(_) => defmt::info!("Worker task {=u32} completed", cmd.ident),
-        Either::Second(_) => defmt::info!("Worker task {=u32} halted", cmd.ident),
+        Either::Second(_) => {
+            defmt::info!("Worker task {=u32} halted", cmd.ident);
+            deadline_stop(task_id);
+        },
     }
 }

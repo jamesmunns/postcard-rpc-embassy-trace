@@ -17,7 +17,7 @@ use embassy_executor::raw::Deadline;
 use crate::app::AppTx;
 
 const SIZE: usize = 64 * 1024;
-const NOTIF_SIZE: usize = SIZE / 8;
+const NOTIF_SIZE: usize = 768 * 4;
 static QUEUE: Churrasco<SIZE> = Churrasco::new();
 static PENDING_Q: WaitQueue = WaitQueue::new();
 static LAST: GroundedCell<u64> = GroundedCell::const_init();
@@ -73,7 +73,7 @@ fn trace(evt: &Event, _cs: CriticalSection) {
 
     if !res {
         // defmt::error!("Oops");
-        panic!();
+        panic!("Overflowed trace data!");
     }
 
 }
@@ -126,12 +126,27 @@ pub extern "Rust" fn _embassy_trace_poll_start(_executor_id: u32) {
     });
 }
 
-pub async fn task_identify(name: &str) {
+pub async fn task_identify(name: &str) -> u32 {
     let task_id: u32 = poll_fn(|cx| {
         Poll::Ready(task_from_waker(cx.waker()).as_id())
     }).await;
     critical_section::with(|cs| {
         let evt = Event::TaskIdentify { tick: now_delta(cs), task_id: task_id - 0x20000000, name };
+        trace(&evt, cs);
+    });
+    task_id
+}
+
+pub fn deadline_start(task_id: u32, deadline: u64) {
+    critical_section::with(|cs| {
+        let evt = Event::DeadlineStart { tick: now_delta(cs), task_id: task_id - 0x20000000, deadline };
+        trace(&evt, cs);
+    });
+}
+
+pub fn deadline_stop(task_id: u32) {
+    critical_section::with(|cs| {
+        let evt = Event::DeadlineStop { tick: now_delta(cs), task_id: task_id - 0x20000000 };
         trace(&evt, cs);
     });
 }

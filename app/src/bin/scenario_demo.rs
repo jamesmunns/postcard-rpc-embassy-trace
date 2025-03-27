@@ -1,7 +1,7 @@
-use std::{collections::HashMap, time::{Duration, Instant}};
+use std::time::Duration;
 
-use poststation_sdk::{connect, connect_insecure, PoststationClient};
-use template_icd::{Event, HaltTasksEndpoint, StageCommand, StageTaskEndpoint, StartTasksEndpoint, Step, TraceReportTopic};
+use poststation_sdk::connect_insecure;
+use template_icd::{HaltTasksEndpoint, StageCommand, StageTaskEndpoint, StartTasksEndpoint, Step};
 use tokio::time::sleep;
 
 use tikv_jemallocator::Jemalloc;
@@ -13,16 +13,6 @@ async fn main() -> Result<(), String> {
     inner_main().await
 }
 
-// #[derive(Default, Clone, Debug)]
-// struct TaskData {
-//     readies: usize,
-//     ticks_active: u64,
-//     ticks_waiting: u64,
-//     ticks_idle: u64,
-//     last_ready: Option<u64>,
-//     last_start: Option<u64>,
-//     last_end: Option<u64>,
-// }
 const SERIAL: u64 = 0x4274E020EBB2D27E;
 
 async fn inner_main() -> Result<(), String> {
@@ -40,12 +30,24 @@ async fn inner_main() -> Result<(), String> {
 
     for i in 100..140 {
         let mut steps = heapless::Vec::new();
-        let _ = steps.push(Step::SleepUs { us: 2 * i * 1000 });
-        let _ = steps.push(Step::WorkUs { us: 1000 * (i - 99) / 8 });
+        let _ = steps.push(Step::WorkTicks { ticks: 32768 / 2000 });
         let _ = steps.push(Step::Yield);
-        let _ = steps.push(Step::WorkUs { us: 1000 * (i - 99) / 8 });
-        let _ = steps.push(Step::SleepUs { us: 2 * i * 1000 });
-        let _ = steps.push(Step::WorkUs { us: 1000 * (i - 99) / 8 });
+        let _ = steps.push(Step::WorkTicks { ticks: 32768 / 2000 });
+        let _ = steps.push(Step::Yield);
+        let _ = steps.push(Step::WorkTicks { ticks: 32768 / 2000 });
+        let _ = steps.push(Step::Yield);
+        let _ = steps.push(Step::WorkTicks { ticks: 32768 / 2000 });
+        let _ = steps.push(Step::SleepTicks { ticks: 32768 / 4 });
+
+        let _ = steps.push(Step::WorkTicks { ticks: 32768 / 2000 });
+        let _ = steps.push(Step::Yield);
+        let _ = steps.push(Step::WorkTicks { ticks: 32768 / 2000 });
+        let _ = steps.push(Step::Yield);
+        let _ = steps.push(Step::WorkTicks { ticks: 32768 / 2000 });
+        let _ = steps.push(Step::Yield);
+        let _ = steps.push(Step::WorkTicks { ticks: 32768 / 2000 });
+        let _ = steps.push(Step::SleepTicks { ticks: 32768 / 4 });
+
 
         client.proxy_endpoint::<StageTaskEndpoint>(
             SERIAL,
@@ -53,14 +55,16 @@ async fn inner_main() -> Result<(), String> {
             &StageCommand {
                 ident: i,
                 steps,
-                loops: true,
-                deadline_ticks: 400,
+                loops: true, // i % 2 == 0,
+                deadline_ticks: 16600, // if i % 2 == 0 { 30000 } else { 16600 },
+                loop_delay_ticks: 0,
+                start_delay_ticks: i as u64 * 150, // if i % 2 == 0 { i as u64 * 150 } else { 32768 * 3 },
             }
         ).await.unwrap().unwrap();
     }
 
-    println!("Halted, Starting in 1s:");
-    sleep(Duration::from_millis(1000)).await;
+    println!("Halted, Starting in 5s:");
+    sleep(Duration::from_millis(5000)).await;
     client.proxy_endpoint::<StartTasksEndpoint>(
         SERIAL,
         200,
